@@ -1,0 +1,25 @@
+Jeu de Taquin - Changelog
+=========================
+
+1.1 (2026-09-28)
+  - Added bottom status bar with elapsed timer (starts on New Game, stops on solve)
+  - Timer text translated with selected language
+  - Save settings on exit now enabled by default
+  - Fixed NULL-as-handle warnings: NULL -> NULLHANDLE/(MPARAM)0 throughout
+  - SHORT truncation warning fixed with explicit cast
+
+1.0 (2026-09-28)
+  - 32-bit OS/2 PM port (OpenWatcom 2.0)
+  - USHORT msg -> ULONG msg in window procedures (32-bit PM requirement)
+  - WinQueryWindow 3-arg -> 2-arg (32-bit PM API)
+  - Restructured menus: Game / Options / Help
+  - Added Ctrl+N (New Game), Ctrl+X (Exit), Ctrl+F (Frame Controls)
+  - Added 6-language support: English, Spanish, Dutch, German, French, Italian
+  - Added settings persistence (taquin.cfg)
+  - Added Frame Controls (borderless mode, Ctrl+F)
+  - About dialog updated to standard OS2World format
+  - Build system migrated to OpenWatcom wmake (makefile.wat / compile-wat.cmd)
+
+--- Original ---
+PC Magazine, Vol. 8 No. 12 & 13, January 1989
+Programmed by Charles Petzold for OS/2 1.x (16-bit PM)

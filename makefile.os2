@@ -1,0 +1,21 @@
+# makefile.os2 -- Jeu de Taquin for ArcaOS/OpenWatcom 2.0
+
+CC     = wcc386
+RC     = wrc
+LINK   = wlink
+
+CFLAGS = -w1 -e25 -j -zq -otexan -of+ -mf -5r -bt=os2 -ei -i=src -i=C:\os2tk45\h
+
+TARGET = bin\taquin.exe
+
+all: $(TARGET)
+
+bin\taquin.obj: src\taquin.c src\taquin.h
+	$(CC) $(CFLAGS) -fo=bin\taquin.obj src\taquin.c
+
+bin\taquin.res: src\taquin.rc src\taquin.h src\taquin.ico
+	$(RC) -r -i=src -i=C:\os2tk45\h -fo=bin\taquin.res src\taquin.rc
+
+$(TARGET): bin\taquin.obj bin\taquin.res
+	$(LINK) system os2v2_pm name $(TARGET) file bin\taquin.obj option stack=8192 option heap=1024 option map=bin\taquin.map
+	$(RC) -q bin\taquin.res $(TARGET)

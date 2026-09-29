@@ -1,0 +1,7 @@
+;-----------------------------------
+; TAQUIN.DEF module definition file
+;-----------------------------------
+
+NAME           TAQUIN    WINDOWAPI
+STACKSIZE      65536
+HEAPSIZE       4096

@@ -1,0 +1,17 @@
+Jeu de Taquin - License
+========================
+
+This program is based on source code originally published in:
+  PC Magazine, Vol. 8 No. 12 & 13, January 1989
+  "Jeu de Taquin" by Charles Petzold
+  (c) 1989, Ziff Communications Co.
+
+The original code was published as example/educational source in a
+technical magazine for the purpose of being studied and used by readers.
+
+The 32-bit OS/2 PM port and all modifications made in 2026 are released
+as public domain / educational use:
+  (c) 2026, OS2World
+
+This software is provided "as is" without warranty of any kind.
+Use at your own risk.

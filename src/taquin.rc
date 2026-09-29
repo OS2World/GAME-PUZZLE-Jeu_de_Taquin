@@ -1,0 +1,64 @@
+/*---------------------------
+   TAQUIN.RC resource script
+  ---------------------------*/
+
+#include <os2.h>
+#include "taquin.h"
+
+POINTER ID_RESOURCE taquin.ico
+
+MENU ID_RESOURCE
+     {
+     SUBMENU  "~Game",                         IDM_SUBMENU_GAME
+          {
+          MENUITEM "~New Game\tCtrl+N",         IDM_NORMAL
+          MENUITEM "~Inverted Reset",            IDM_INVERT
+          MENUITEM "~Scramble",                  IDM_SCRAMBLE
+          MENUITEM SEPARATOR
+          MENUITEM "E~xit\tCtrl+X",             IDM_EXIT
+          }
+     SUBMENU  "~Options",                      IDM_SUBMENU_OPTIONS
+          {
+          SUBMENU  "~Language",                 IDM_SUBMENU_LANG
+               {
+               MENUITEM "English",              IDM_LANG_EN, MIA_CHECKED
+               MENUITEM "Espanol",              IDM_LANG_ES
+               MENUITEM "Nederlands",           IDM_LANG_NL
+               MENUITEM "Deutsch",              IDM_LANG_DE
+               MENUITEM "Francais",             IDM_LANG_FR
+               MENUITEM "Italiano",             IDM_LANG_IT
+               }
+          MENUITEM SEPARATOR
+          MENUITEM "~Frame Controls\tCtrl+F",   IDM_FRAME
+          MENUITEM SEPARATOR
+          MENUITEM "~Save settings on exit",    IDM_SAVEONEXIT
+          }
+     SUBMENU  "~Help",                         IDM_SUBMENU_HELP
+          {
+          MENUITEM "~About...",                 IDM_ABOUT
+          }
+     }
+
+ACCELTABLE ID_RESOURCE
+     {
+     "n",  IDM_NORMAL,   CONTROL
+     "N",  IDM_NORMAL,   CONTROL
+     "x",  IDM_EXIT,     CONTROL
+     "X",  IDM_EXIT,     CONTROL
+     "f",  IDM_FRAME,    CONTROL
+     "F",  IDM_FRAME,    CONTROL
+     }
+
+DLGTEMPLATE IDD_ABOUT
+     {
+     DIALOG "About Jeu de Taquin", 0, 32, 24, 240, 110,, FCF_TITLEBAR|FCF_DLGBORDER
+          {
+          CTEXT "Jeu de Taquin for OS/2",              -1, 10, 88, 220, 8
+          CTEXT "Version 1.1",                         -1, 10, 76, 220, 8
+          CTEXT "OpenWatcom Release",                  -1, 10, 64, 220, 8
+          CTEXT "(c) 1989, Ziff Communications Co.",   -1, 10, 52, 220, 8
+          CTEXT "(c) 2026, OS2World",                  -1, 10, 40, 220, 8
+          CTEXT "Public Domain / Educational Use",     -1, 10, 28, 220, 8
+          DEFPUSHBUTTON "Close" DID_OK,               98, 10, 44, 14, WS_GROUP
+          }
+     }
