@@ -5,6 +5,8 @@ Version 1.1 — 32-bit PM port for ArcaOS / OS/2 Warp 4.52
 The classic 15-tile sliding puzzle, originally programmed by Charles Petzold
 and published in PC Magazine Vol. 8 No. 12 & 13, January 1989.
 
+![JeuDeTaquin](/doc/JeuDeTaquin.png)
+
 ## License
 
 Public Domain / Educational Use  
